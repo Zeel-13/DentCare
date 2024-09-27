@@ -15,6 +15,8 @@ def index(request):
         patient_name=request.POST.get('patient_name')
         patient_email=request.POST.get('patient_email')
         date=request.POST.get('date')
+        parts = date.split('-')
+        date = parts[2] + '-' + parts[1] + '-' + parts[0]
         time=request.POST.get('time')
         appointment=Appointment.objects.create(service=service,doctor=doctor,patient_name=patient_name,patient_email=patient_email,date=date,time=time)
         appointment.save()
