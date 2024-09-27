@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import Appointment
 # Create your views here.
 
 
@@ -15,7 +16,8 @@ def index(request):
         patient_email=request.POST.get('patient_email')
         date=request.POST.get('date')
         time=request.POST.get('time')
-
+        appointment=Appointment.objects.create(service=service,doctor=doctor,patient_name=patient_name,patient_email=patient_email,date=date,time=time)
+        appointment.save()
         send_mail(
             'Appointment Booked Successfully at DentCare',
             'Hello '+patient_name+',\n\nYour appointment for '+ service + ' has been booked successfully with '+doctor+' on '+date+' at '+time+'.\n\nThank You!',
