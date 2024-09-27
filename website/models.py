@@ -8,3 +8,6 @@ class Appointment(models.Model):
     doctor=models.CharField(max_length=15)
     date=models.CharField(max_length=15)
     time=models.CharField(max_length=15)
+
+    def __str__(self):
+        return f"{self.patient_name}---{self.service}"

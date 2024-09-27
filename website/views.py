@@ -25,7 +25,6 @@ def index(request):
             [patient_email],
             fail_silently=False,
         )
-
         messages.success(request, "Appointment Booked Successfully! Check your email for further details.")
         return render(request,'index.html',{})
     else:
