@@ -1,7 +1,7 @@
 
 # 🦷 DentCare
 
-**DentCare** is a web-based application designed to streamline dental clinic operations. It offers functionalities for appointment scheduling, patient management, and administrative tasks, providing an efficient solution for dental healthcare providers.
+**DentCare** is a responsive dental clinic website featuring an intuitive appointment booking system that allows patients to schedule visits online. The platform includes automated email confirmations for seamless communication, ensuring patients receive instant updates. The site is designed for ease of use, improving both the clinic's efficiency and patient experience.
 
 ## 🛠 Tech Stack
 
